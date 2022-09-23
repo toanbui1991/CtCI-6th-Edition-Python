@@ -1,8 +1,11 @@
-from chapter_02.linked_list import LinkedList
+from linked_list import LinkedList
 
-
+#delete middle node
+#to delete a middle note we have two do two peration
+#one: node.value = node.next.value 
+#two update reference to the next node: node.next = node.next.next
 def delete_middle_node(node):
-    node.value = node.next.value
+    node.value = node.next.value #update node value
     node.next = node.next.next
 
 

@@ -1,11 +1,13 @@
 from chapter_02.linked_list import LinkedList
 
-
+#find node kth count from tail
 def kth_to_last(ll, k):
     leader = follower = ll.head
     count = 0
 
     while leader:
+        #this will help set up leader and follower by kth position
+        #stop the search when leader is None
         if count >= k:
             follower = follower.next
         count += 1
