@@ -17,6 +17,7 @@ def remove_dups(ll):
             seen.add(current.value) 
             previous = current #this equal to move previous node to one index
         current = current.next #this equal to move to next node
+    #break the loop then current is None
     ll.tail = previous
     return ll
 
@@ -27,10 +28,10 @@ def remove_dups_followup(ll):
         runner = current
         while runner.next:
             if runner.next.value == current.value:
-                runner.next = runner.next.next
+                runner.next = runner.next.next #this equal to move duplicates nodes
             else:
-                runner = runner.next
-        current = current.next
+                runner = runner.next #move to next node
+        current = current.next #move to next node
     ll.tail = runner
     return ll
 
