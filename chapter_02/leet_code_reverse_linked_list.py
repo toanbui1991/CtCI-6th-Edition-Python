@@ -11,10 +11,7 @@ class Solution:
         curr = head #start at head node
         while curr: #loop through untill meet the last node
             #get the next node first otherwise it will change the sequence unexpectedly
-            next_node = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next_node
+            curr.next, prev, curr = prev, curr, curr.next #using in line swap
         return prev
 
 # Recursively    
