@@ -2,7 +2,10 @@ import time
 import unittest
 from collections import defaultdict
 
-
+"""
+problem: check if array or string contain only unique element
+idea: check the length of array with the length of set of that array
+"""
 def is_unique_chars_algorithmic(string):
     # Assuming character set is ASCII (128 characters)
     if len(string) > 128:
