@@ -2,7 +2,13 @@
 import time
 import unittest
 
-
+"""
+problem: given two string, check that two string is one edit away or not
+analyze: we have four  case:
+    one: two string with the same length, we check it is just one edit or not
+    two and thre: one of the string is less one element, we checkt it is just one insert away
+    four: otherwise return false. 
+"""
 def are_one_edit_different(s1, s2):
     """Check if a string can converted to another string with a single edit"""
     if len(s1) == len(s2):
@@ -15,6 +21,7 @@ def are_one_edit_different(s1, s2):
 
 
 def one_edit_replace(s1, s2):
+    #idea: loop through each element of two string array, if more than one different return False, 
     edited = False
     for c1, c2 in zip(s1, s2):
         if c1 != c2:
@@ -25,14 +32,15 @@ def one_edit_replace(s1, s2):
 
 
 def one_edit_insert(s1, s2):
+    #idea: we have s1 is less than s2 one element
     edited = False
     i, j = 0, 0
     while i < len(s1) and j < len(s2):
         if s1[i] != s2[j]:
-            if edited:
+            if edited: #check flag
                 return False
-            edited = True
-            j += 1
+            edited = True #update flag
+            j += 1 #increase pointer of s2
         else:
             i += 1
             j += 1

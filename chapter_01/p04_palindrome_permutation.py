@@ -2,7 +2,13 @@
 import string
 import unittest
 from collections import Counter
-
+"""
+problem: check a string is a permutation of palindrome or not
+analyze: 
+    a palindrom string is a string which read from left to right will be the same as read from right to left
+    palindrome  will mirror at the middle pont
+    palindrome will have sum([value % 2 for value in counter.values()]) <= 1
+"""
 
 def clean_phrase(phrase):
     return [c for c in phrase.lower() if c in string.ascii_lowercase]
