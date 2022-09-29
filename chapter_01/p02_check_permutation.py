@@ -2,6 +2,11 @@
 import unittest
 from collections import Counter
 
+"""
+problem: check if array or string is permutation of each other
+analyze: permutation is the process of changing order of element in sequence
+idea: if 2 sequence is permutation of each other, they have to havet he same length, and the number of each element have to be the same.
+"""
 
 def check_permutation_by_sort(s1, s2):
     if len(s1) != len(s2):

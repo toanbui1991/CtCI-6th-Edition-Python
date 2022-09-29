@@ -25,21 +25,19 @@ class Solution:
     def checkInclusion_rolling_hass(self, s1: str, s2: str) -> bool:
         #find length of the window
         k = len(s1)
-        #counter object
+        #build the first counter
         d1 = Counter(s1)
-        
-        # initial window
+        #build the second counter
         window = s2[:k]
         d2 = Counter(window)
         
         # check the intial window 
         if d1 == d2:
             return True
-
+        #slie the window
         for i in range(len(s2)-k):
         
-            # SLIDE THE WINDOW
-            # 1 - remove s2[i]
+            # 1 - remove s2[i] ()
             if d2[s2[i]] == 1:
                 del d2[s2[i]]
             elif d2[s2[i]] > 1:

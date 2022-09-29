@@ -1,6 +1,10 @@
 from chapter_02.linked_list import LinkedList
 
-
+"""
+problem: given head of two singly linked list, find the node in which two linked intersect
+problem reference: https://leetcode.com/problems/intersection-of-two-linked-lists/
+analyze: 
+"""
 def intersection(list1, list2):
     if list1.tail is not list2.tail:
         return False

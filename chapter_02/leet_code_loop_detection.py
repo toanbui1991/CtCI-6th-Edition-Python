@@ -11,7 +11,10 @@ class ListNode:
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         slow = fast = head
-        #we have one operation ahead of checking condition
+        #we have one operation ahead of checking condition, because we start with slow and slow is true
+        #because, we move two step as a time we have to check two condition for
+        #fast is None means that we have been two step from tail
+        #fast.next is None means that we have been one step from tail
         while fast is not None and fast.next is not None:
             fast = fast.next.next
             slow = slow.next

@@ -22,6 +22,8 @@ def add_two_number(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[L
         n = n.next
     return root.next
 
+def generate_linked_list(arr):
+    return 
 #build test case for this function using pytest
 test_case = [
     ([ListNode(0),ListNode(1)], [ListNode(0),ListNode(1),ListNode(2)], [ListNode(0), ListNode(2), ListNode(2)]),

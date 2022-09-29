@@ -8,6 +8,7 @@ def partition(ll, x):
         next_node = current.next
         current.next = None
         if current.value < x:
+            #two operation equal to move the current to head ()
             current.next = ll.head
             ll.head = current
         else:

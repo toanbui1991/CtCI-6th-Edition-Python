@@ -21,25 +21,18 @@ def compress_string(string):
     return min(string, "".join(compressed), key=len)
 
 def compress(self, chars: List[str]) -> int:
-    walker, runner = 0, 0
-    while runner < len(chars):
-    
-        chars[walker] = chars[runner]
-        count = 1
-        
-        while runner + 1 < len(chars) and chars[runner] == chars[runner+1]:
-            runner += 1
-            count += 1
-        
-        if count > 1:
-            for c in str(count):
-                chars[walker+1] = c
-                walker += 1
-        
-        runner += 1
-        walker += 1
-    
-    return walker
+    counter = 0
+    prev = ""
+    result_list = []
+    for e in chars:
+        if prev == e:
+            counter += 1
+            result_list.extend(e, str(counter))
+        else:
+            counter = 0
+            prev = e
+            result_list.extend(e)
+    return len(result_list)
 
 
 class Test(unittest.TestCase):
