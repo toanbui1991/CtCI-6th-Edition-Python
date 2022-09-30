@@ -4,6 +4,8 @@ from typing import List
 """
 problem: given two string s and p. find all start position of of s which start of an anagram of p.
 analyze: we need to loop throug a list using window
+solution:
+    using counter (hash table), why do we use counter instead of sorted string. with counter we just need to update counter instead of sorting every time
 """
 
 class Solution:
