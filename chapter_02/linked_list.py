@@ -1,6 +1,6 @@
 import random
 
-
+#here we define a node with attribute value, next and prev
 class LinkedListNode:
     def __init__(self, value, next_node=None, prev_node=None):
         self.value = value
