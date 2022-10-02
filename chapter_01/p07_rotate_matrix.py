@@ -25,6 +25,30 @@ def rotate_matrix(matrix):
             matrix[i][-layer - 1] = top
     return matrix
 
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        remember we have square matrix
+        """
+        l, r = 0, len(matrix) - 1
+        while l < r: #which layer to move element
+            for i in range(r-l): #which element in given layer
+                top, bottom = l, r #we have to know this is the squar matrix
+                
+                #save the topleft
+                topleft = matrix[top][l+i]
+                #move the bottom left into the top right
+                matrix[top][l + i] = matrix[bottom-i][l]
+                #move the bottom right into bottom left
+                matrix[bottom - i][l] = matrix[bottom][r - i]
+                #move the top right into bottom rigth
+                matrix[bottom][r-i] = matrix[top + i][r]
+                #move the top left into the top right
+                matrix[top + i][r] = topleft
+                
+            r -= 1
+            l += 1
 
 def rotate_matrix_double_swap(matrix):
     n = len(matrix)

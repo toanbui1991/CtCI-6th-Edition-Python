@@ -58,6 +58,8 @@ class LinkedList:
         for v in values:
             self.add(v)
 
+    def add_two_numbers(s)
+
     @classmethod
     def generate(cls, k, min_value, max_value):
         return cls(random.choices(range(min_value, max_value), k=k))

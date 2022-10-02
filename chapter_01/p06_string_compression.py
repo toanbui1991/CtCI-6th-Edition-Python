@@ -1,4 +1,5 @@
 import time
+from typing import List
 import unittest
 
 
@@ -18,6 +19,20 @@ def compress_string(string):
 
     # returns original string if compressed string isn't smaller
     return min(string, "".join(compressed), key=len)
+
+def compress(self, chars: List[str]) -> int:
+    counter = 0
+    prev = ""
+    result_list = []
+    for e in chars:
+        if prev == e:
+            counter += 1
+            result_list.extend(e, str(counter))
+        else:
+            counter = 0
+            prev = e
+            result_list.extend(e)
+    return len(result_list)
 
 
 class Test(unittest.TestCase):
