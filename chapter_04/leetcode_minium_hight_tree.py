@@ -8,6 +8,8 @@ analyze:
     5, a path graph is a tree with two or more vertices that is not branched at all
     6, a tree is called rooted tree if one vertex have been desinated as root
     7, the height of a rooted tree is the number of edge on the logest
+idea:
+    tream layer of leav until find the middle.
 """
 from collections import defaultdict
 from typing import List
