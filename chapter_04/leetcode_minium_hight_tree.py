@@ -52,7 +52,7 @@ class Solution:
             # leave nodes removal
             for leaf in leave_nodes:
                 #remove leaf, leaf only have one neighbor
-                neighbor = adj_matrix[leaf].pop()
+                neighbor = adj_matrix[leaf].pop() #leaf have only one connect node
                 adj_matrix[neighbor].remove( leaf )
                 #check if neight is leaf to build list of new leaf
                 if len(adj_matrix[neighbor]) == 1:
