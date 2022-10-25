@@ -1,5 +1,7 @@
 """
 problem: given tree, find nodes which will return tree with minium height
+    - problem reference: https://leetcode.com/problems/minimum-height-trees/
+    - problem descriptoin: a tree is present of n (number of node), edges (list of list) present edges
 analyze:
     1, a tree is undirected graph in which any two vertices are connected by exactly one path
     2, any connected graph who has n nodes with n-1 edges is a tree
@@ -10,6 +12,14 @@ analyze:
     7, the height of a rooted tree is the number of edge on the logest
 idea:
     tream layer of leav until find the middle.
+note:
+    1. leaf node is a node which only have one edge connected to it
+    2. three is undirected graph, only have one edge between nodes
+    3. team leaf node process will return root tree which in it's mininum height
+    4. why continue with condition total nodes > 2. because if remaining two nodes either of them can be root
+    5. immport search varialbe: 
+        - number of remaining nodes to break the loop
+        - current leaf node. 
 """
 from collections import defaultdict
 from typing import List

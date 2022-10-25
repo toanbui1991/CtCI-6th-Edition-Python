@@ -1,6 +1,7 @@
 import pytest
 
 
+
 class MultiStack:
     def __init__(self, stack_size, number_of_stacks):
         self.number_of_stacks = number_of_stacks
